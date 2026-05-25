@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Camisetas</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+
+</head>
+
+<body>
+
+  <div class="container">
+
+    <h1>Buscador de Camisetas</h1>
+
+    <input
+      type="text"
+      id="buscar"
+      placeholder="Buscar estudiante..."
+    >
+
+    <table>
+
+      <thead>
+        <tr>
+          <th>Genero</th>
+          <th>Estudiante</th>
+          <th>Talla</th>
+          <th>Numero</th>
+          <th>Observación</th>
+        </tr>
+      </thead>
+
+      <tbody id="tabla"></tbody>
+
+    </table>
+
+  </div>
+
+  <script src="config.js"></script>
+  <script src="app.js"></script>
+
+</body>
+</html>
