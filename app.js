@@ -3,31 +3,32 @@ const buscar = document.getElementById("buscar");
 
 async function cargarDatos(texto = "") {
 
-  let query = client
-    .from("camisetas")
-    .select("*");
+    let query = client
+        .from("camisetas")
+        .select("*");
 
-  if(texto){
+    if (texto) {
 
-    query = query.ilike(
-      "estudiante",
-      `%${texto}%`
-    );
-  }
+        query = query.ilike(
+            "estudiante",
+            `%${texto}%`
+        );
+    }
 
-  const { data, error } = await query;
+    const { data, error } = await query;
 
-  if(error){
-    console.log(error);
-    return;
-  }
+    if (error) {
+        console.log(error);
+        return;
+    }
 
-  tabla.innerHTML = "";
+    tabla.innerHTML = "";
 
-  data.forEach(item => {
+    data.forEach(item => {
 
-    tabla.innerHTML += `
+        tabla.innerHTML += `
       <tr>
+        <td>${item.id}</td>
         <td>${item.genero}</td>
         <td>${item.estudiante}</td>
         <td>${item.talla}</td>
@@ -35,12 +36,12 @@ async function cargarDatos(texto = "") {
         <td>${item.observacion}</td>
       </tr>
     `;
-  });
+    });
 }
 
-buscar.addEventListener("keyup", (e)=>{
+buscar.addEventListener("keyup", (e) => {
 
-  cargarDatos(e.target.value);
+    cargarDatos(e.target.value);
 
 });
 
