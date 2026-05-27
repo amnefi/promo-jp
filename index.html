@@ -3,13 +3,24 @@
 
 <head>
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
 
-    <title>Camisetas</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="stylesheet" href="style.css">
+    <title>Buscador de Camisetas</title>
 
+    <!-- DATATABLES -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css" />
+
+    <link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.5.0/css/responsive.dataTables.min.css" />
+
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+    <!-- ESTILOS -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- SUPABASE -->
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
 
 </head>
@@ -18,30 +29,74 @@
 
     <div class="container">
 
-        <h1>Buscador de Camisetas</h1>
+        <!-- HEADER -->
+        <header class="header">
 
-        <input type="text" id="buscar" placeholder="Buscar estudiante...">
+            <div class="logo-box">
 
-        <table>
+                <i class="fa-solid fa-shirt"></i>
 
-            <thead>
-                <tr>
-                    <th>ID</th>
-                    <th>Genero</th>
-                    <th>Estudiante</th>
-                    <th>Talla</th>
-                    <th>Numero</th>
-                    <th>Observación</th>
-                </tr>
-            </thead>
+            </div>
 
-            <tbody id="tabla"></tbody>
+            <div>
 
-        </table>
+                <h1>Buscador de Camisetas</h1>
+
+                <p>
+                    Consulta tu talla, número y observación
+                </p>
+
+            </div>
+
+        </header>
+
+        <!-- BUSCADOR -->
+        <section class="buscador-box">
+
+            <i class="fa-solid fa-magnifying-glass"></i>
+
+            <input type="text" id="buscar" placeholder="Buscar estudiante...">
+
+        </section>
+
+        <!-- TABLA -->
+        <section class="tabla-container">
+
+            <table id="tabla-datos" class="display responsive nowrap">
+
+                <thead>
+
+                    <tr>
+
+                        <th>Código</th>
+                        <th>Género</th>
+                        <th>Estudiante</th>
+                        <th>Talla</th>
+                        <th>Número</th>
+                        <th>Observación</th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody id="tabla"></tbody>
+
+            </table>
+
+        </section>
 
     </div>
 
+    <!-- JQUERY -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <!-- DATATABLES -->
+    <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+
+    <script src="https://cdn.datatables.net/responsive/2.5.0/js/dataTables.responsive.min.js"></script>
+
     <script src="config.js"></script>
+
     <script src="app.js"></script>
 
 </body>

@@ -1,0 +1,592 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+body {
+
+  background:
+    linear-gradient(
+      135deg,
+      #f1f5f9,
+      #e2e8f0,
+      #f8fafc
+    );
+
+  min-height: 100vh;
+
+  padding: 25px;
+
+  color: #0f172a;
+}
+
+/* =========================
+   CONTAINER
+========================= */
+
+.container {
+
+  max-width: 1450px;
+
+  margin: auto;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+.header {
+
+  margin-bottom: 30px;
+}
+
+.header h1 {
+
+  font-size: 42px;
+
+  font-weight: 800;
+
+  background:
+    linear-gradient(
+      to right,
+      #2563eb,
+      #7c3aed
+    );
+
+  -webkit-background-clip: text;
+
+  -webkit-text-fill-color: transparent;
+
+  letter-spacing: 1px;
+}
+
+/* =========================
+   BOTONES SUPERIORES
+========================= */
+
+.acciones {
+
+  display: flex;
+
+  gap: 15px;
+
+  flex-wrap: wrap;
+
+  margin-bottom: 25px;
+}
+
+.acciones button {
+
+  background: white;
+
+  color: #0f172a;
+
+  border: 1px solid #e2e8f0;
+
+  padding: 14px 20px;
+
+  border-radius: 16px;
+
+  cursor: pointer;
+
+  font-weight: 700;
+
+  transition: .3s;
+
+  box-shadow:
+    0 4px 18px rgba(0,0,0,.06);
+}
+
+.acciones button:hover {
+
+  transform: translateY(-3px);
+
+  background: #f8fafc;
+
+  box-shadow:
+    0 10px 24px rgba(0,0,0,.10);
+}
+
+/* =========================
+   BUSCADOR
+========================= */
+
+.buscador {
+
+  margin-bottom: 25px;
+}
+
+.buscador input {
+
+  width: 100%;
+
+  padding: 16px 18px;
+
+  border-radius: 18px;
+
+  border: 1px solid #cbd5e1;
+
+  background: white;
+
+  color: #0f172a;
+
+  font-size: 15px;
+
+  outline: none;
+
+  transition: .3s;
+
+  box-shadow:
+    0 4px 15px rgba(0,0,0,.04);
+}
+
+.buscador input::placeholder {
+
+  color: #64748b;
+}
+
+.buscador input:focus {
+
+  border-color: #2563eb;
+
+  box-shadow:
+    0 0 0 4px rgba(37,99,235,.12);
+}
+
+/* =========================
+   FORMULARIO
+========================= */
+
+.formulario-card {
+
+  background:
+    rgba(255,255,255,.75);
+
+  border: 1px solid rgba(255,255,255,.7);
+
+  backdrop-filter: blur(14px);
+
+  border-radius: 28px;
+
+  padding: 35px;
+
+  margin-bottom: 30px;
+
+  box-shadow:
+    0 10px 40px rgba(15,23,42,.08);
+}
+
+.formulario-card h2 {
+
+  margin-bottom: 28px;
+
+  font-size: 28px;
+
+  color: #0f172a;
+}
+
+/* =========================
+   GRID
+========================= */
+
+.form-grid {
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(auto-fit, minmax(220px, 1fr));
+
+  gap: 22px;
+
+  margin-bottom: 28px;
+}
+
+/* =========================
+   INPUT GROUP
+========================= */
+
+.input-group {
+
+  display: flex;
+
+  flex-direction: column;
+}
+
+.input-group label {
+
+  margin-bottom: 10px;
+
+  color: #334155;
+
+  font-weight: 700;
+
+  font-size: 14px;
+}
+
+/* =========================
+   INPUTS
+========================= */
+
+.input-group input,
+.input-group select {
+
+  width: 100%;
+
+  padding: 15px;
+
+  border-radius: 16px;
+
+  border: 1px solid #cbd5e1;
+
+  background: white;
+
+  color: #0f172a;
+
+  font-size: 15px;
+
+  outline: none;
+
+  transition: .3s;
+}
+
+.input-group input::placeholder {
+
+  color: #94a3b8;
+}
+
+.input-group input:focus,
+.input-group select:focus {
+
+  border-color: #2563eb;
+
+  box-shadow:
+    0 0 0 4px rgba(37,99,235,.10);
+}
+
+/* =========================
+   BOTON GUARDAR
+========================= */
+
+.btn-guardar {
+
+  background:
+    linear-gradient(
+      135deg,
+      #2563eb,
+      #7c3aed
+    );
+
+  color: white;
+
+  border: none;
+
+  padding: 15px 24px;
+
+  border-radius: 16px;
+
+  cursor: pointer;
+
+  font-weight: 700;
+
+  font-size: 15px;
+
+  transition: .3s;
+
+  box-shadow:
+    0 10px 24px rgba(37,99,235,.25);
+}
+
+.btn-guardar:hover {
+
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 14px 30px rgba(37,99,235,.35);
+}
+
+/* =========================
+   TABLA
+========================= */
+
+.tabla {
+
+  background:
+    rgba(255,255,255,.75);
+
+  border:
+    1px solid rgba(255,255,255,.7);
+
+  border-radius: 28px;
+
+  padding: 20px;
+
+  overflow-x: auto;
+
+  backdrop-filter: blur(18px);
+
+  box-shadow:
+    0 10px 40px rgba(15,23,42,.08);
+}
+
+/* =========================
+   DATATABLE
+========================= */
+
+table.dataTable {
+
+  color: #0f172a !important;
+
+  border-collapse: collapse !important;
+}
+
+table.dataTable thead {
+
+  background:
+    linear-gradient(
+      135deg,
+      #2563eb,
+      #7c3aed
+    );
+}
+
+table.dataTable thead th {
+
+  color: white !important;
+
+  font-weight: 700 !important;
+
+  border-bottom: none !important;
+
+  padding: 15px !important;
+}
+
+table.dataTable tbody tr {
+
+  background: transparent !important;
+
+  transition: .25s;
+}
+
+table.dataTable tbody tr:hover {
+
+  background:
+    rgba(37,99,235,.05) !important;
+}
+
+table.dataTable td {
+
+  color: #334155 !important;
+
+  padding: 14px !important;
+
+  border-bottom:
+    1px solid #e2e8f0;
+}
+
+/* =========================
+   PAGINACION
+========================= */
+
+.dataTables_wrapper {
+
+  color: #334155 !important;
+}
+
+.dataTables_length,
+.dataTables_filter,
+.dataTables_info {
+
+  color: #334155 !important;
+
+  margin-bottom: 10px;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button {
+
+  border-radius: 10px !important;
+
+  border: none !important;
+
+  margin: 4px;
+
+  background: white !important;
+
+  color: #0f172a !important;
+
+  box-shadow:
+    0 2px 8px rgba(0,0,0,.05);
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button.current {
+
+  background:
+    linear-gradient(
+      135deg,
+      #2563eb,
+      #7c3aed
+    ) !important;
+
+  color: white !important;
+}
+
+/* =========================
+   INPUTS DATATABLE
+========================= */
+
+.dataTables_length select,
+.dataTables_filter input {
+
+  background: white;
+
+  color: #0f172a;
+
+  border:
+    1px solid #cbd5e1;
+
+  border-radius: 10px;
+
+  padding: 6px 10px;
+}
+
+/* =========================
+   BOTONES TABLA
+========================= */
+
+.acciones-tabla {
+
+  display: flex;
+
+  gap: 10px;
+
+  flex-wrap: wrap;
+}
+
+.btn-editar,
+.btn-eliminar {
+
+  border: none;
+
+  padding: 10px 14px;
+
+  border-radius: 12px;
+
+  color: white;
+
+  cursor: pointer;
+
+  font-size: 14px;
+
+  font-weight: 700;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  transition: .3s;
+}
+
+.btn-editar {
+
+  background:
+    linear-gradient(
+      135deg,
+      #3b82f6,
+      #2563eb
+    );
+
+  box-shadow:
+    0 6px 18px rgba(37,99,235,.20);
+}
+
+.btn-eliminar {
+
+  background:
+    linear-gradient(
+      135deg,
+      #ef4444,
+      #dc2626
+    );
+
+  box-shadow:
+    0 6px 18px rgba(220,38,38,.20);
+}
+
+.btn-editar:hover,
+.btn-eliminar:hover {
+
+  transform: translateY(-2px);
+}
+
+/* =========================
+   CODIGO REGISTRO
+========================= */
+
+.codigo-registro {
+
+  color: #2563eb;
+
+  font-weight: 800;
+
+  letter-spacing: 1px;
+
+  font-size: 14px;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width: 768px) {
+
+  body {
+
+    padding: 15px;
+  }
+
+  .header h1 {
+
+    font-size: 30px;
+  }
+
+  .acciones {
+
+    flex-direction: column;
+  }
+
+  .acciones button {
+
+    width: 100%;
+  }
+
+  .btn-guardar {
+
+    width: 100%;
+  }
+
+  .formulario-card {
+
+    padding: 22px;
+  }
+
+  .acciones-tabla {
+
+    flex-direction: column;
+  }
+
+  .btn-editar,
+  .btn-eliminar {
+
+    width: 100%;
+
+    justify-content: center;
+  }
+
+  table.dataTable {
+
+    min-width: 900px;
+  }
+}
