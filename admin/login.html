@@ -1,26 +1,106 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
 
-<meta charset="UTF-8">
+  <meta charset="UTF-8" />
 
-<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0" />
+
+  <title>Login Admin</title>
+
+  <!-- FONT AWESOME -->
+  <link rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <!-- SWEET ALERT -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+  <!-- SUPABASE -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+
+  <!-- ESTILOS -->
+  <link rel="stylesheet" href="./estilos/login.css" />
 
 </head>
 
 <body>
 
-<h1>Login</h1>
+  <div class="login-container">
 
-<input type="email" id="email">
-<input type="password" id="password">
+    <div class="login-card">
 
-<button onclick="login()">
-Ingresar
-</button>
+      <div class="logo-box">
 
-<script src="../config.js"></script>
-<script src="login.js"></script>
+        <i class="fa-solid fa-user-shield"></i>
+
+      </div>
+
+      <h1>Panel Administrativo</h1>
+
+      <p>
+        Inicia sesión para continuar
+      </p>
+
+      <!-- EMAIL -->
+
+      <div class="input-group">
+
+        <label>Correo electrónico</label>
+
+        <div class="input-icon">
+
+          <i class="fa-solid fa-envelope"></i>
+
+          <input
+            type="email"
+            id="email"
+            placeholder="correo@ejemplo.com"
+          />
+
+        </div>
+
+      </div>
+
+      <!-- PASSWORD -->
+
+      <div class="input-group">
+
+        <label>Contraseña</label>
+
+        <div class="input-icon">
+
+          <i class="fa-solid fa-lock"></i>
+
+          <input
+            type="password"
+            id="password"
+            placeholder="********"
+          />
+
+        </div>
+
+      </div>
+
+      <!-- BOTON -->
+
+      <button onclick="login()">
+
+        <i class="fa-solid fa-right-to-bracket"></i>
+
+        Ingresar
+
+      </button>
+
+    </div>
+
+  </div>
+
+  <script src="../config.js"></script>
+
+  <script src="login.js"></script>
 
 </body>
+
 </html>
