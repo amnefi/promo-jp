@@ -535,6 +535,15 @@ table.dataTable tbody tr:hover {
   color: white !important;
 }
 
+table.dataTable td:nth-child(5) {
+
+  text-align: center;
+
+  font-weight: 700;
+
+  color: #2563eb;
+}
+
 /* RESPONSIVE */
 
 @media(max-width: 768px) {

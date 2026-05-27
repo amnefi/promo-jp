@@ -4,10 +4,9 @@
 <head>
 
   <meta charset="UTF-8" />
-
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Panel Admin</title>
+  <title>Promo JP II | Panel Admin</title>
 
   <!-- DataTables -->
   <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css" />
@@ -20,18 +19,13 @@
 
   <!-- PDF -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
-
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.31/jspdf.plugin.autotable.min.js"></script>
 
   <!-- LIBRERIAS -->
   <script src="https://code.jquery.com/jquery-3.7.1.min.js" defer></script>
-
   <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js" defer></script>
-
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11" defer></script>
-
   <script src="https://cdn.jsdelivr.net/npm/xlsx/dist/xlsx.full.min.js" defer></script>
-
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js" defer></script>
 
   <!-- CONFIG -->
@@ -45,16 +39,12 @@
 <body>
 
   <div class="container">
-
     <!-- HEADER -->
-
     <header class="header">
-
       <div>
 
         <h1>
-          <i class="fa-solid fa-chart-line"></i>
-          Panel Admin
+          <i class="fa-solid fa-chart-line"></i> Panel Admin
         </h1>
 
         <p>
@@ -66,39 +56,30 @@
     </header>
 
     <!-- ACCIONES -->
-
     <section class="acciones">
 
       <button type="button" class="btn-excel" onclick="exportarExcel()">
 
-        <i class="fa-solid fa-file-excel"></i>
-
-        Excel
+        <i class="fa-solid fa-file-excel"></i>Excel
 
       </button>
 
       <button type="button" class="btn-ods" onclick="exportarODS()">
 
-        <i class="fa-solid fa-file"></i>
-
-        ODS
+        <i class="fa-solid fa-file"></i> ODS
 
       </button>
 
       <button type="button" class="btn-pdf" onclick="exportarPDF()">
 
-        <i class="fa-solid fa-file-pdf"></i>
-
-        PDF
+        <i class="fa-solid fa-file-pdf"></i> PDF
 
       </button>
 
     </section>
 
     <!-- BUSCADOR -->
-
     <section class="buscador">
-
       <div class="search-box">
 
         <i class="fa-solid fa-magnifying-glass"></i>
@@ -115,9 +96,7 @@
 
       <h2>
 
-        <i class="fa-solid fa-user-plus"></i>
-
-        Registro de Estudiantes
+        <i class="fa-solid fa-user-plus"></i> Registro de Estudiantes
 
       </h2>
 
@@ -252,21 +231,13 @@
           <thead>
 
             <tr>
-              <!-- CODIGO -->
               <th>Código</th>
-
               <th>Género</th>
-
               <th>Nombre</th>
-
               <th>Talla</th>
-
-              <th>Número</th>
-
+              <th>Número de Camiseta</th>
               <th>Observación</th>
-
               <th>Acciones</th>
-
             </tr>
 
           </thead>

@@ -31,11 +31,8 @@ function initDataTable() {
   dataTable = $('#tabla-datos').DataTable({
 
     destroy: true,
-
     pageLength: 10,
-
     responsive: true,
-
     language: {
       url:
         'https://cdn.datatables.net/plug-ins/1.13.6/i18n/es-ES.json'
@@ -71,9 +68,7 @@ async function cargarDatos(texto = "") {
     Swal.fire({
 
       icon: "error",
-
       title: "Error",
-
       text: "No se pudieron cargar los datos"
 
     });
@@ -86,7 +81,6 @@ async function cargarDatos(texto = "") {
   if (dataTable) {
 
     dataTable.destroy();
-
     dataTable = null;
   }
 
@@ -97,28 +91,20 @@ async function cargarDatos(texto = "") {
     tablaBody.innerHTML += `
 
       <tr>
-
-  <!-- CODIGO -->
-<td class="codigo-registro">
-
-  ${item.codigo || ""}
-
-</td>
-
-  <!-- GENERO -->
-  <td>${item.genero || ""}</td>
-
-  <!-- NOMBRE -->
-  <td>${item.estudiante || ""}</td>
-
-  <!-- TALLA -->
-  <td>${item.talla || ""}</td>
-
-  <!-- NUMERO -->
-  <td>${item.numero || ""}</td>
-
-  <!-- OBSERVACION -->
-  <td>${item.observacion || ""}</td>
+      <!-- CODIGO -->
+      <td class="codigo-registro">
+      ${item.codigo || ""}
+      </td>
+      <!-- GENERO -->
+      <td>${item.genero || ""}</td>
+      <!-- NOMBRE -->
+      <td>${item.estudiante || ""}</td>
+      <!-- TALLA -->
+      <td>${item.talla || ""}</td>
+      <!-- NUMERO -->
+      <td>${item.numero || ""}</td>
+      <!-- OBSERVACION -->
+      <td>${item.observacion || ""}</td>
 
         <td class="acciones-tabla">
 
@@ -202,9 +188,7 @@ async function agregar() {
     Swal.fire({
 
       icon: "warning",
-
       title: "Campos incompletos",
-
       text: "Completa todos los campos"
 
     });
@@ -223,13 +207,9 @@ async function agregar() {
       .update({
 
         genero: genero,
-
         estudiante: nombre,
-
         talla: talla,
-
         numero: numero,
-
         observacion: observacion
 
       })
@@ -287,15 +267,10 @@ async function agregar() {
       .insert([{
 
         codigo: codigo,
-
         genero: genero,
-
         estudiante: nombre,
-
         talla: talla,
-
         numero: numero,
-
         observacion: observacion
 
       }]);
@@ -310,9 +285,7 @@ async function agregar() {
     Swal.fire({
 
       icon: "error",
-
       title: "Error",
-
       text: "No se pudo guardar"
 
     });
@@ -356,13 +329,9 @@ function editar(
   editandoId = id;
 
   document.getElementById("genero").value = genero;
-
   document.getElementById("nombre").value = estudiante;
-
   document.getElementById("talla").value = talla;
-
   document.getElementById("numero").value = numero;
-
   document.getElementById("observacion").value = observacion;
 
   // SCROLL BONITO
@@ -384,15 +353,11 @@ async function eliminar(id) {
   const resultado = await Swal.fire({
 
     title: "¿Eliminar?",
-
     text: "No podrás revertirlo",
-
     icon: "warning",
 
     showCancelButton: true,
-
     confirmButtonText: "Sí, eliminar",
-
     cancelButtonText: "Cancelar"
   });
 
@@ -408,7 +373,6 @@ async function eliminar(id) {
     Swal.fire({
 
       icon: "error",
-
       title: "Error al eliminar"
     });
 
@@ -418,11 +382,8 @@ async function eliminar(id) {
   Swal.fire({
 
     icon: "success",
-
     title: "Registro eliminado",
-
     timer: 1200,
-
     showConfirmButton: false
   });
 
@@ -438,13 +399,9 @@ function limpiarFormulario() {
   editandoId = null;
 
   document.getElementById("genero").selectedIndex = 0;
-
   document.getElementById("nombre").value = "";
-
   document.getElementById("talla").value = "";
-
   document.getElementById("numero").value = "";
-
   document.getElementById("observacion").selectedIndex = 0;
 }
 
@@ -464,15 +421,10 @@ function obtenerDatosExportacion() {
     data.push({
 
       Codigo: row[0],
-
       Genero: row[1],
-
       Nombre: row[2],
-
       Talla: row[3],
-
       Numero: row[4],
-
       Observacion: row[5]
     });
   });
@@ -544,15 +496,10 @@ async function exportarPDF() {
     filas.push([
 
       row[0],
-
       row[1],
-
       row[2],
-
       row[3],
-
       row[4],
-
       row[5]
 
     ]);
